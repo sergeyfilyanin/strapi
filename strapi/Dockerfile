@@ -1,5 +1,5 @@
 ARG NODE_VERSION
-FROM node:14.20.1-alpine AS base
+FROM node:16.18.0-alpine AS base
 EXPOSE 1337
 
 ARG BASE_VERSION
