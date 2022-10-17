@@ -30,7 +30,7 @@ jobs:
           push: true
           tags: sergeyfilyanin/strapi:latest
           build-args: |
-            STRAPI_VERSION=4.4.1
+            STRAPI_VERSION=4.4.3
             BASE_VERSION=latest
       -
         name: Image digest
