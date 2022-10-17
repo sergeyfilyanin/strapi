@@ -1,5 +1,5 @@
-ARG BASE_VERSION
-FROM strapi/base:${BASE_VERSION}
+#FROM strapi/base:${BASE_VERSION}
+FROM node:18.11-alpine
 
 ARG STRAPI_VERSION
 RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
