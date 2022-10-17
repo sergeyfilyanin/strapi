@@ -15,6 +15,8 @@ WORKDIR /srv/app
 
 VOLUME /srv/app
 
+RUN npm run build
+
 COPY strapi/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
