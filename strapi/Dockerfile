@@ -15,8 +15,7 @@ WORKDIR /srv/app
 
 VOLUME /srv/app
 
-COPY docker-entrypoint.sh /usr/local/bin/
-RUN chmod 777 /usr/local/bin/docker-entrypoint.sh 
+COPY strapi/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["strapi", "develop"]
