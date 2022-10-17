@@ -8,14 +8,13 @@ FROM base
 
 ARG STRAPI_VERSION
 RUN yarn global add @strapi/strapi@${STRAPI_VERSION}
+RUN npm run build
 
 RUN mkdir /srv/app && chown 1000:1000 -R /srv/app
 
 WORKDIR /srv/app
 
 VOLUME /srv/app
-
-RUN npm run build
 
 COPY strapi/docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
